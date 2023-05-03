@@ -1,0 +1,18 @@
+<form
+    class="form"
+    [formGroup]="MyInstanceFormGroup">
+    <app-title-input
+        ngDefaultControl
+        [formControlName]="'title'">
+    </app-title-input>
+
+    <app-author-input
+        [formControlName]="'author'">
+    </app-author-input>
+
+    <app-content-input
+        [formControlName]="'content'">
+    </app-content-input>
+</form>
+
+{{ MyInstanceFormGroup.value | json }}
